@@ -25,7 +25,7 @@ namespace Plugins.DataStore.InMemory
             if (categories.Any(x => x.Name.Equals(category.Name, StringComparison.OrdinalIgnoreCase))) 
                 return;
 
-            if(categories != null && categories.Count > 0)
+            if(categories.Count > 0)
             {
                 var maxId = categories.Max(x => x.CategoryId);
                 category.CategoryId = maxId + 1;

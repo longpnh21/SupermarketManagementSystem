@@ -1,6 +1,6 @@
 ﻿using CoreBusiness;
 
-namespace UseCases.UseCaseInterfaces
+namespace UseCases.CategoriesUseCases.Interfaces
 {
     public interface IEditCategoryUseCase
     {

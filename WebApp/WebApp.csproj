@@ -10,4 +10,8 @@
     <ProjectReference Include="..\UseCase\UseCases.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\ManageProducts\" />
+  </ItemGroup>
+
 </Project>

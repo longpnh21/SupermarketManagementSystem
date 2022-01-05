@@ -1,7 +1,7 @@
-﻿using UseCases.DataStorePluginInterfaces;
-using UseCases.UseCaseInterfaces;
+﻿using UseCases.CategoriesUseCases.Interfaces;
+using UseCases.DataStorePluginInterfaces;
 
-namespace UseCases
+namespace UseCases.CategoriesUseCases
 {
     public class DeleteCategoryUseCase : IDeleteCategoryUseCase
     {

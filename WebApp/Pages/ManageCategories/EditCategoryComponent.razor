@@ -18,8 +18,8 @@
         </div>
 
         <div class="form-group">
-            <label for="name">Description</label>
-            <InputText id="name" @bind-Value="category.Description"class="form-control"></InputText>
+            <label for="description">Description</label>
+            <InputText id="description" @bind-Value="category.Description"class="form-control"></InputText>
         </div>
 
         <button type="submit" class="btn btn-primary">Save</button>
@@ -50,7 +50,7 @@
             var cat = GetCategoryByIdUseCase.Execute(id);
             this.category = new Category { CategoryId = cat.CategoryId, Name = cat.Name, Description = cat.Description };
         }
-        
+
     }
 
     private void OnValidSubmit()
@@ -59,8 +59,5 @@
         NavigationManager.NavigateTo("/categories");
     }
 
-    private void OnCancel()
-    {
-        NavigationManager.NavigateTo("/categories");
-    }
+    private void OnCancel() => NavigationManager.NavigateTo("/categories");
 }

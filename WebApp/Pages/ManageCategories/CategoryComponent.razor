@@ -1,6 +1,6 @@
 ﻿@page "/categories"
 @inject NavigationManager NavigationManager
-@inject IViewCategoriesUseCase ViewCategoryUseCase
+@inject IViewCategoriesUseCase ViewCategoriesUseCase
 @inject IDeleteCategoryUseCase DeleteCategoryUseCase
 
 <h3>Manage Categories</h3>
@@ -42,20 +42,11 @@
         LoadCategories();
     }
 
-    private void LoadCategories()
-    {
-        categories = ViewCategoryUseCase.Execute()?.ToList();
-    }
+    private void LoadCategories() => categories = ViewCategoriesUseCase.Execute()?.ToList();
 
-    private void OnClickAddCategory()
-    {
-        NavigationManager.NavigateTo("/addcategory");
-    }
+    private void OnClickAddCategory() => NavigationManager.NavigateTo("/addcategory");
 
-    private void EditCategory(Category category)
-    {
-        NavigationManager.NavigateTo($"/editcategory/{category.CategoryId}");
-    }
+    private void EditCategory(Category category) => NavigationManager.NavigateTo($"/editcategory/{category.CategoryId}");
 
     private void DeleteCategory(int categoryId)
     {

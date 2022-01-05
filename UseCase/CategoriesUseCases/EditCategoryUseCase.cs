@@ -1,8 +1,8 @@
 ﻿using CoreBusiness;
+using UseCases.CategoriesUseCases.Interfaces;
 using UseCases.DataStorePluginInterfaces;
-using UseCases.UseCaseInterfaces;
 
-namespace UseCases
+namespace UseCases.CategoriesUseCases
 {
     public class EditCategoryUseCase : IEditCategoryUseCase
     {
